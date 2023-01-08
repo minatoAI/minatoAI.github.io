@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>在Linux下切换使用的软件版本</title>
+    <link href="/2023/01/08/%E5%9C%A8Linux%E4%B8%8B%E5%88%87%E6%8D%A2%E4%BD%BF%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E7%89%88%E6%9C%AC/"/>
+    <url>/2023/01/08/%E5%9C%A8Linux%E4%B8%8B%E5%88%87%E6%8D%A2%E4%BD%BF%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E7%89%88%E6%9C%AC/</url>
+    
+    <content type="html"><![CDATA[<h1 id="update-alternatives：linux软件版本管理命令"><a href="#update-alternatives：linux软件版本管理命令" class="headerlink" title="update-alternatives：linux软件版本管理命令"></a>update-alternatives：linux软件版本管理命令</h1><blockquote><p>参考链接：<a href="https://cloud.tencent.com/developer/article/1532283">https://cloud.tencent.com/developer/article/1532283</a><br><a href="https://blog.csdn.net/u011762313/article/details/47324839">https://blog.csdn.net/u011762313/article/details/47324839</a><br>该命令需要管理员权限，请在使用时保证拥有权限</p></blockquote><h2 id="各个选项的作用"><a href="#各个选项的作用" class="headerlink" title="各个选项的作用"></a>各个选项的作用</h2><p>以下省略命令<code>update-alternatives</code>，只描述选项</p><ul><li><code>--display 名称</code>：查看该名称的软件版本信息</li><li><code>--config 名称</code>：配置软件版本，即手动选择版本</li><li><code>--auto 名称</code>：切换为自动选择版本，选择优先级最高的版本</li><li><code>--install link name path priority</code>：增加版本信息<ul><li>link：版本信息的软链接目录，即系统变量</li><li>name：版本信息里的软件名称</li><li>path：软件的目录</li><li>priority：优先级，数字更大则优先级更高</li></ul></li></ul><h2 id="个人例子"><a href="#个人例子" class="headerlink" title="个人例子"></a>个人例子</h2><p>因为开了不同版本的Minecraft服务器，而某些版本对于Java的版本有不同要求<br>比如1.7.10就需要Java8，不兼容更高版本；而运行1.19.2的最低Java版本是17<br>这时候就需要在运行之前切换Java版本</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>CLI命令</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>WO Mic：让手机成为电脑的麦克风</title>
     <link href="/2023/01/08/WO-Mic%EF%BC%9A%E8%AE%A9%E6%89%8B%E6%9C%BA%E6%88%90%E4%B8%BA%E7%94%B5%E8%84%91%E7%9A%84%E9%BA%A6%E5%85%8B%E9%A3%8E/"/>
     <url>/2023/01/08/WO-Mic%EF%BC%9A%E8%AE%A9%E6%89%8B%E6%9C%BA%E6%88%90%E4%B8%BA%E7%94%B5%E8%84%91%E7%9A%84%E9%BA%A6%E5%85%8B%E9%A3%8E/</url>
