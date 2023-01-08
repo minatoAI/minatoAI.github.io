@@ -13,9 +13,7 @@
     
     <categories>
       
-      <category>软件</category>
-      
-      <category>其他</category>
+      <category>软件问题解决</category>
       
     </categories>
     
@@ -23,6 +21,8 @@
     <tags>
       
       <tag>软件</tag>
+      
+      <tag>git</tag>
       
     </tags>
     
@@ -219,16 +219,18 @@
     
     <categories>
       
-      <category>软件</category>
-      
-      <category>使用</category>
+      <category>软件使用方法</category>
       
     </categories>
     
     
     <tags>
       
+      <tag>node.js</tag>
+      
       <tag>软件</tag>
+      
+      <tag>静态文件服务</tag>
       
     </tags>
     
@@ -402,9 +404,7 @@
     
     <categories>
       
-      <category>软件</category>
-      
-      <category>其他</category>
+      <category>软件问题解决</category>
       
     </categories>
     
@@ -412,6 +412,8 @@
     <tags>
       
       <tag>软件</tag>
+      
+      <tag>QQ机器人</tag>
       
     </tags>
     
@@ -456,9 +458,7 @@
     
     <categories>
       
-      <category>软件</category>
-      
-      <category>其他</category>
+      <category>软件问题解决</category>
       
     </categories>
     
