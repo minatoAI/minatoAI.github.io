@@ -8,7 +8,7 @@
     <link href="/2023/02/11/%E6%9B%B4%E6%94%B9powershell%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81/"/>
     <url>/2023/02/11/%E6%9B%B4%E6%94%B9powershell%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81/</url>
     
-    <content type="html"><![CDATA[<h1 id="解决powershell输出重定向的文件编码问题"><a href="#解决powershell输出重定向的文件编码问题" class="headerlink" title="解决powershell输出重定向的文件编码问题"></a>解决powershell输出重定向的文件编码问题</h1><blockquote><p>参考链接：<a href="https://blog.csdn.net/qianxiao_1/article/details/79463409">https://blog.csdn.net/qianxiao_1/article/details/79463409</a></p></blockquote><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><ul><li>执行命令：<code>$PSDefaultParameterValues[&#39;Out-File:Encoding&#39;] = &#39;utf8&#39;</code>，选择utf8编码<ul><li>可选参数：unknown,string,unicode,bigendianunicode,utf8,utf7,utf32,ascii,default,oem<blockquote><p>可以输入一个错误选项，系统会返回一个警告，可以选择警告中的参数</p></blockquote></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="解决powershell输出重定向的文件编码问题"><a href="#解决powershell输出重定向的文件编码问题" class="headerlink" title="解决powershell输出重定向的文件编码问题"></a>解决powershell输出重定向的文件编码问题</h1><span id="more"></span><blockquote><p>参考链接：<a href="https://blog.csdn.net/qianxiao_1/article/details/79463409">https://blog.csdn.net/qianxiao_1/article/details/79463409</a></p></blockquote><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><ul><li>执行命令：<code>$PSDefaultParameterValues[&#39;Out-File:Encoding&#39;] = &#39;utf8&#39;</code>，选择utf8编码<ul><li>可选参数：unknown,string,unicode,bigendianunicode,utf8,utf7,utf32,ascii,default,oem<blockquote><p>可以输入一个错误选项，系统会返回一个警告，可以选择警告中的参数</p></blockquote></li></ul></li></ul>]]></content>
     
     
     <categories>
@@ -20,7 +20,9 @@
     
     <tags>
       
-      <tag>Win10,powershell</tag>
+      <tag>Win10</tag>
+      
+      <tag>powershell</tag>
       
     </tags>
     
