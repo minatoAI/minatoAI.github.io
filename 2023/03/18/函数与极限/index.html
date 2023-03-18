@@ -1,0 +1,705 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="minatoAI">
+  <meta name="keywords" content="GitHub Hexo fluid blog 博客 个人">
+  
+    <meta name="description" content="高数第一章映射与函数映射$f$是一个规则，集合$X$为输入，集合$Y$为输出，并且$X$的每个元素只对应$Y$中的一个元素若数集$D \in R$（实数集的子集），则$f:D \to R$称为函数$D$称为定义域，$f$称为函数法则普通情况下默认定义域的范围使函数法则有意义，称为自然定义域在满足函数定义的前提下，定义域的不同范围可以有不同的函数法则，这类函数称为分段函数 函数特性 有界性：在定义域">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数与极限">
+<meta property="og:url" content="https://minatoai.github.io/2023/03/18/%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/index.html">
+<meta property="og:site_name" content="minatoAI的博客">
+<meta property="og:description" content="高数第一章映射与函数映射$f$是一个规则，集合$X$为输入，集合$Y$为输出，并且$X$的每个元素只对应$Y$中的一个元素若数集$D \in R$（实数集的子集），则$f:D \to R$称为函数$D$称为定义域，$f$称为函数法则普通情况下默认定义域的范围使函数法则有意义，称为自然定义域在满足函数定义的前提下，定义域的不同范围可以有不同的函数法则，这类函数称为分段函数 函数特性 有界性：在定义域">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-18T09:47:14.000Z">
+<meta property="article:modified_time" content="2023-03-18T13:03:31.644Z">
+<meta property="article:author" content="minatoAI">
+<meta property="article:tag" content="GitHub Hexo fluid blog 博客 个人">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>函数与极限 - minatoAI的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"minatoai.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":6},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>minatoAI的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="函数与极限"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-03-18 17:47" pubdate>
+          2023年3月18日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          14 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">函数与极限</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2023年3月18日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="高数第一章"><a href="#高数第一章" class="headerlink" title="高数第一章"></a>高数第一章</h1><h2 id="映射与函数"><a href="#映射与函数" class="headerlink" title="映射与函数"></a>映射与函数</h2><p>映射$f$是一个规则，集合$X$为输入，集合$Y$为输出，并且$X$的每个元素只对应$Y$中的一个元素<br>若数集$D \in R$（实数集的子集），则$f:D \to R$称为函数<br>$D$称为定义域，$f$称为函数法则<br>普通情况下默认定义域的范围使函数法则有意义，称为自然定义域<br>在满足函数定义的前提下，定义域的不同范围可以有不同的函数法则，这类函数称为分段函数</p>
+<h3 id="函数特性"><a href="#函数特性" class="headerlink" title="函数特性"></a>函数特性</h3><ul>
+<li>有界性：在定义域的某个子集上，函数的绝对值总小于某个正数<ul>
+<li>若总小于某个数，称为上界；总大于某个数，称为下界</li>
+</ul>
+</li>
+<li>单调性：在定义域的某个区间上，任意两点的大小顺序不变，则对应的函数值大小顺序相同</li>
+<li>奇偶性：函数定义域关于原点对称<ul>
+<li>奇函数：$f(-x)&#x3D;-f(x)$</li>
+<li>偶函数：$f(-x)&#x3D;f(x)$</li>
+</ul>
+</li>
+<li>周期性：$f(x+l)&#x3D;f(x)$，$l$称为周期，一般选择最小正周期</li>
+</ul>
+<h3 id="函数特例"><a href="#函数特例" class="headerlink" title="函数特例"></a>函数特例</h3><ul>
+<li>反函数：若函数$f:D \to f(D)$是单射，即定义域内是单调的函数，则它有逆映射$f^{-1}(D) \to D$，称为该函数的反函数  </li>
+<li>复合函数：$y&#x3D;f(u),u&#x3D;g(x),R_g \subset D_f$，则函数$y&#x3D;f[g(x)],x \in D_g$称为这两个函数构成的复合函数，$u$称为中间变量；也可表示为$(f \circ g)$<ul>
+<li>可推广至更多中间变量的复合函数</li>
+</ul>
+</li>
+</ul>
+<h3 id="函数的运算"><a href="#函数的运算" class="headerlink" title="函数的运算"></a>函数的运算</h3><p>对函数法则的运算，定义为遵守四则运算法则</p>
+<h3 id="基本初等函数"><a href="#基本初等函数" class="headerlink" title="基本初等函数"></a>基本初等函数</h3><ul>
+<li>幂函数：$y&#x3D;x^{\mu},\mu \in R$</li>
+<li>指数函数：$y&#x3D;a^x, a&gt;0 \land a \neq 1$</li>
+<li>对数函数：$y&#x3D; \log_a x,a&gt;0 \land a \neq 1$<ul>
+<li>$a&#x3D;e$时，可表示为$y&#x3D;\ln x$</li>
+</ul>
+</li>
+<li>三角函数，如$\cos x,\tan x$</li>
+<li>反三角函数（三角函数的反函数），如$\arccos x, \arctan x$</li>
+</ul>
+<p>初等函数：常数和上述函数经过有限次的四则运算、函数复合构成的一个函数式。</p>
+<h2 id="数列极限-lim-x-n"><a href="#数列极限-lim-x-n" class="headerlink" title="数列极限$\lim {x_n}$"></a>数列极限$\lim {x_n}$</h2><h3 id="lim-x-n-的定义"><a href="#lim-x-n-的定义" class="headerlink" title="$\lim {x_n}$的定义"></a>$\lim {x_n}$的定义</h3><p>数列的项数变大，数与某常数（极限值）的距离缩小<br>当项数足够大时，该距离小于任意值  </p>
+<h3 id="lim-x-n-的性质"><a href="#lim-x-n-的性质" class="headerlink" title="$\lim {x_n}$的性质"></a>$\lim {x_n}$的性质</h3><ul>
+<li>数列收敛，则极限唯一</li>
+<li>数列收敛，则该数列有界</li>
+<li>保号性：若极限值大于0，那么从某项开始，数列大于0；极限值小于0，则对应结论小于0<ul>
+<li>若数列从某项起大于0，且极限存在，则极限大于0；条件小于0，则结论也小于0</li>
+</ul>
+</li>
+<li>某数列收敛，极限值为a；该数列的任一子数列收敛，极限值也是a</li>
+</ul>
+<h2 id="函数极限-lim-f-x"><a href="#函数极限-lim-f-x" class="headerlink" title="函数极限$\lim f(x)$"></a>函数极限$\lim f(x)$</h2><h3 id="lim-f-x-的定义"><a href="#lim-f-x-的定义" class="headerlink" title="$\lim f(x)$的定义"></a>$\lim f(x)$的定义</h3><blockquote>
+<p>符号表示：$x \to x_0$，自变量接近一个确定的数<br>$x \to \infty$，自变量的绝对值无穷大</p>
+</blockquote>
+<ul>
+<li>$\lim_{x \to x_0}f(x)&#x3D;A$：自变量接近$x_0$，函数值接近$A$；$|x-x_0|$足够小，$|f(x)-A|$小于任意值</li>
+<li>$\lim_{x \to \infty}f(x)&#x3D;A$：自变量绝对值增大，函数值接近$A$；$|x|$足够大，$|f(x)-A|$小于任意值</li>
+</ul>
+<blockquote>
+<p>函数极限的几何意义：函数图像的水平渐近线</p>
+</blockquote>
+<h3 id="lim-f-x-的性质"><a href="#lim-f-x-的性质" class="headerlink" title="$\lim f(x)$的性质"></a>$\lim f(x)$的性质</h3><blockquote>
+<p>与数列极限的性质类似</p>
+</blockquote>
+<ul>
+<li>极限存在则唯一</li>
+<li>局部有界：函数有极限值，自变量满足极限的某个接近范围，则函数值绝对值小于某数</li>
+<li>局部保号：函数有极限值，该值大于0，则自变量满足极限的某个接近范围时，函数值大于0；极限值小于0，则结论也小于0</li>
+</ul>
+<blockquote>
+<p>通过局部保号性可推得：函数有极限值$A$，那么在自变量的某个接近范围内，$|f(x)|&gt;\frac{|A|}{2}$</p>
+</blockquote>
+<ul>
+<li>若在$x_0$的附近某个范围内，$f(x) \geq 0$，且极限值存在，则极限值大于等于0；条件小于等于0，结论也小于等于0</li>
+<li>$\lim_{x \to x_0} f(x)$存在，${x_n}$在定义域内，收敛于$x_0,x_n \neq x_0$，则数列$\left{f(x_n)\right}$收敛，该数列的极限值等于函数极限值</li>
+</ul>
+<h2 id="无穷小与无穷大"><a href="#无穷小与无穷大" class="headerlink" title="无穷小与无穷大"></a>无穷小与无穷大</h2><p>函数极限值为0（或数列极限为0），称为无穷小</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>函数与极限</div>
+      <div>https://minatoai.github.io/2023/03/18/函数与极限/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>minatoAI</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年3月18日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/02/12/%E5%AD%A6%E4%B9%A0%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E5%85%89%E7%BA%BF%E8%BF%BD%E8%B8%AA/" title="学习实现简单的光线追踪">
+                        <span class="hidden-mobile">学习实现简单的光线追踪</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
