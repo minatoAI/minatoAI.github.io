@@ -83,11 +83,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -299,12 +295,15 @@
             
               <div class="markdown-body">
                 
-                <h1 id="树莓派4B安装docker记录"><a href="#树莓派4B安装docker记录" class="headerlink" title="树莓派4B安装docker记录"></a>树莓派4B安装docker记录</h1><blockquote>
+                <h1 id="树莓派4b安装docker记录"><a class="markdownIt-Anchor" href="#树莓派4b安装docker记录"></a> 树莓派4B安装docker记录</h1>
+<blockquote>
 <p>关键词：树莓派，docker</p>
 </blockquote>
-<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>提示：换源保证安装过程不超时而出错</p>
+<h2 id="过程"><a class="markdownIt-Anchor" href="#过程"></a> 过程</h2>
+<p>提示：换源保证安装过程不超时而出错</p>
 <ul>
-<li>下载安装脚本，执行<ul>
+<li>下载安装脚本，执行
+<ul>
 <li><code>curl -fsSL https://get.docker.com -o get-docker.sh</code></li>
 <li><code>sudo sh get-docker.sh</code></li>
 </ul>
@@ -312,7 +311,8 @@
 <li>等待</li>
 <li>完成后输入<code>docker version</code>、<code>docker info</code>确认其是否正常运行</li>
 </ul>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<h2 id="常用命令"><a class="markdownIt-Anchor" href="#常用命令"></a> 常用命令</h2>
+<ul>
 <li>查看镜像ID：<code>docker images</code></li>
 <li>查看容器运行情况：<code>docker ps</code>或<code>docker container ls</code></li>
 <li>停止容器：<code>docker stop 容器id</code></li>

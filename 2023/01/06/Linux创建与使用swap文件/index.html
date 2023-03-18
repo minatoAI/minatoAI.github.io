@@ -84,11 +84,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -238,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          562 字
+          552 字
         
       </span>
     
@@ -300,11 +296,12 @@
             
               <div class="markdown-body">
                 
-                <h1 id="为Linux创建swap文件并使用"><a href="#为Linux创建swap文件并使用" class="headerlink" title="为Linux创建swap文件并使用"></a>为Linux创建swap文件并使用</h1><h2 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h2><ol>
+                <h1 id="为linux创建swap文件并使用"><a class="markdownIt-Anchor" href="#为linux创建swap文件并使用"></a> 为Linux创建swap文件并使用</h1>
+<h2 id="实际操作"><a class="markdownIt-Anchor" href="#实际操作"></a> 实际操作</h2>
+<ol>
 <li>进入<code>/usr</code>目录，创建swap文件夹</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd /usr  <br>mkdir swap<br></code></pre></td></tr></table></figure>
-
 <blockquote>
 <p>（在该目录的命令可能需要提升权限，下同）</p>
 </blockquote>
@@ -312,29 +309,33 @@
 <li>进入swap文件夹，创建swapfile文件</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">dd if=/dev/zero of=/usr/swap/swapfile bs=1M count=4096  <br></code></pre></td></tr></table></figure>
-
-<p>bs为块大小，count为块数目，一般修改count调整大小<br>3. 更改swapfile文件的权限  </p>
+<p>bs为块大小，count为块数目，一般修改count调整大小<br />
+3. 更改swapfile文件的权限</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">chmod 0600 swapfile  <br>chown root:root swapfile<br></code></pre></td></tr></table></figure>
-
 <ol start="4">
 <li>将swapfile文件设置为虚拟内存</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mkswap /usr/swap/swapfile<br></code></pre></td></tr></table></figure>
-
 <ol start="5">
 <li>将文件作为虚拟内存启用</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">swapon /usr/swap/swapfile<br></code></pre></td></tr></table></figure>
-
 <ol start="6">
 <li>将该文件作为虚拟内存设置为开机启动</li>
 </ol>
 <ul>
-<li>修改&#x2F;etc&#x2F;fstab文件<br> <code>vim /etc/fstab</code>  </li>
-<li>添加一些内容<br> <code>/usr/swap/swapfile swap swap defaults 0 0</code></li>
+<li>修改/etc/fstab文件<br />
+<code>vim /etc/fstab</code></li>
+<li>添加一些内容<br />
+<code>/usr/swap/swapfile swap swap defaults 0 0</code></li>
 </ul>
-<h2 id="swap的作用"><a href="#swap的作用" class="headerlink" title="swap的作用"></a>swap的作用</h2><p>当系统需要比物理内存更多的内存空间的时候<br>内核会把内存里边用得比较少的内存页面swap out到交换分区<br>以空出物理内存给当前应用来快速运行。  </p>
-<p>某些应用启动的时候初始化但是随后的应用运行期间不再使用的内存页面<br>系统会把这部分页面也swap out到交换空间<br>以留出物理内存页面给其他应用或者磁盘缓存。</p>
+<h2 id="swap的作用"><a class="markdownIt-Anchor" href="#swap的作用"></a> swap的作用</h2>
+<p>当系统需要比物理内存更多的内存空间的时候<br />
+内核会把内存里边用得比较少的内存页面swap out到交换分区<br />
+以空出物理内存给当前应用来快速运行。</p>
+<p>某些应用启动的时候初始化但是随后的应用运行期间不再使用的内存页面<br />
+系统会把这部分页面也swap out到交换空间<br />
+以留出物理内存页面给其他应用或者磁盘缓存。</p>
 
                 
               </div>

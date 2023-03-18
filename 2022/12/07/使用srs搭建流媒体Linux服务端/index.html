@@ -16,12 +16,12 @@
   <meta name="author" content="minatoAI">
   <meta name="keywords" content="GitHub Hexo fluid blog 博客 个人">
   
-    <meta name="description" content="搭建流媒体服务相关步骤与记录 关键词：docker，流媒体，RTMP，SRS">
+    <meta name="description" content="搭建流媒体服务相关步骤与记录  关键词：docker，流媒体，RTMP，SRS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用srs搭建流媒体Linux服务端">
 <meta property="og:url" content="https://minatoai.github.io/2022/12/07/%E4%BD%BF%E7%94%A8srs%E6%90%AD%E5%BB%BA%E6%B5%81%E5%AA%92%E4%BD%93Linux%E6%9C%8D%E5%8A%A1%E7%AB%AF/index.html">
 <meta property="og:site_name" content="minatoAI的博客">
-<meta property="og:description" content="搭建流媒体服务相关步骤与记录 关键词：docker，流媒体，RTMP，SRS">
+<meta property="og:description" content="搭建流媒体服务相关步骤与记录  关键词：docker，流媒体，RTMP，SRS">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-12-06T16:50:22.000Z">
 <meta property="article:modified_time" content="2023-01-08T03:45:06.007Z">
@@ -84,11 +84,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -238,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          551 字
+          531 字
         
       </span>
     
@@ -300,31 +296,38 @@
             
               <div class="markdown-body">
                 
-                <h1 id="搭建流媒体服务相关步骤与记录"><a href="#搭建流媒体服务相关步骤与记录" class="headerlink" title="搭建流媒体服务相关步骤与记录"></a>搭建流媒体服务相关步骤与记录</h1><blockquote>
+                <h1 id="搭建流媒体服务相关步骤与记录"><a class="markdownIt-Anchor" href="#搭建流媒体服务相关步骤与记录"></a> 搭建流媒体服务相关步骤与记录</h1>
+<blockquote>
 <p>关键词：docker，流媒体，RTMP，SRS</p>
 </blockquote>
 <span id="more"></span>
-
-<h2 id="部署SRS-docker"><a href="#部署SRS-docker" class="headerlink" title="部署SRS docker"></a>部署SRS docker</h2><ol>
-<li><p>安装docker</p>
+<h2 id="部署srs-docker"><a class="markdownIt-Anchor" href="#部署srs-docker"></a> 部署SRS docker</h2>
+<ol>
+<li>
+<p>安装docker</p>
 </li>
-<li><p>终端执行：</p>
+<li>
+<p>终端执行：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker run --rm -it -p 1935:1935 -p 1985:1985 -p 8080:8080 \<br> registry.cn-hangzhou.aliyuncs.com/ossrs/srs:5 ./objs/srs -c conf/docker.conf<br></code></pre></td></tr></table></figure>
-
 <p>端口设置：<code>docker外部端口:docker内部端口</code>，要修改端口号就改前者</p>
 </li>
 </ol>
-<h2 id="推流"><a href="#推流" class="headerlink" title="推流"></a>推流</h2><h3 id="obs"><a href="#obs" class="headerlink" title="obs"></a>obs</h3><ul>
-<li>地址：rtmp:&#x2F;&#x2F;服务器地址&#x2F;live&#x2F;；推流码：livestream<ul>
+<h2 id="推流"><a class="markdownIt-Anchor" href="#推流"></a> 推流</h2>
+<h3 id="obs"><a class="markdownIt-Anchor" href="#obs"></a> obs</h3>
+<ul>
+<li>地址：rtmp://服务器地址/live/；推流码：livestream
+<ul>
 <li>参考链接：<a target="_blank" rel="noopener" href="https://ossrs.net/lts/zh-cn/docs/v5/doc/getting-started#multiple-streams">https://ossrs.net/lts/zh-cn/docs/v5/doc/getting-started#multiple-streams</a></li>
 </ul>
 </li>
 <li>安装最新版obs减少问题（或重装）</li>
 </ul>
-<h3 id="FFmpeg"><a href="#FFmpeg" class="headerlink" title="FFmpeg"></a>FFmpeg</h3><ul>
+<h3 id="ffmpeg"><a class="markdownIt-Anchor" href="#ffmpeg"></a> FFmpeg</h3>
+<ul>
 <li>示例：<code>ffmpeg -re -i 文件路径/文件名 -c copy -f flv rtmp://服务器地址/live/livestream</code></li>
 </ul>
-<h2 id="播放"><a href="#播放" class="headerlink" title="播放"></a>播放</h2><p>打开<code>http://服务器地址:8080/</code>转到SRS的http界面，可以找到现成的播放页面</p>
+<h2 id="播放"><a class="markdownIt-Anchor" href="#播放"></a> 播放</h2>
+<p>打开<code>http://服务器地址:8080/</code>转到SRS的http界面，可以找到现成的播放页面</p>
 <blockquote>
 <p>参考链接：<a target="_blank" rel="noopener" href="https://ossrs.net/lts/zh-cn/docs/v5/doc/getting-started">https://ossrs.net/lts/zh-cn/docs/v5/doc/getting-started</a></p>
 </blockquote>

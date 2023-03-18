@@ -82,11 +82,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -236,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          959 字
+          849 字
         
       </span>
     
@@ -298,16 +294,28 @@
             
               <div class="markdown-body">
                 
-                <h1 id="初步上手的日志，或要点记录"><a href="#初步上手的日志，或要点记录" class="headerlink" title="初步上手的日志，或要点记录"></a>初步上手的日志，或要点记录</h1><h2 id="安装系统到SD卡"><a href="#安装系统到SD卡" class="headerlink" title="安装系统到SD卡"></a>安装系统到SD卡</h2><p><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/software/">点此转到官方烧录软件下载</a></p>
+                <h1 id="初步上手的日志或要点记录"><a class="markdownIt-Anchor" href="#初步上手的日志或要点记录"></a> 初步上手的日志，或要点记录</h1>
+<h2 id="安装系统到sd卡"><a class="markdownIt-Anchor" href="#安装系统到sd卡"></a> 安装系统到SD卡</h2>
+<p><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/software/">点此转到官方烧录软件下载</a></p>
 <p>然后进行配置，略过</p>
 <blockquote>
 <p>可以在此提前配置用户，可以在后面直接进行ssh；也可以配置WiFi连接</p>
 </blockquote>
-<h2 id="更换国内软件源"><a href="#更换国内软件源" class="headerlink" title="更换国内软件源"></a>更换国内软件源</h2><p><code>sudo su</code>登录到root用户，然后编辑 <code>/etc/apt/sources.list</code><br>可以用vi或者nano</p>
+<h2 id="更换国内软件源"><a class="markdownIt-Anchor" href="#更换国内软件源"></a> 更换国内软件源</h2>
+<p><code>sudo su</code>登录到root用户，然后编辑 <code>/etc/apt/sources.list</code><br />
+可以用vi或者nano</p>
 <blockquote>
-<p>deb https:/&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian&#x2F; bullseye main contrib non-free<br># deb-src https:/&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian&#x2F; bullseye main contrib non-free<br>deb https:/&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian&#x2F; bullseye-updates main contrib non-free<br># deb-src https:/&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian&#x2F; bullseye-updates main contrib non-free<br>deb https:/&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian&#x2F; bullseye-backports main contrib non-free<br># deb-src https:/&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian&#x2F; bullseye-backports main contrib non-free<br>deb https:/&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian-security bullseye-security main contrib non-free<br># deb-src https:/&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian-security bullseye-security main contrib non-free</p>
+<p>deb <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/debian/">https://mirrors.tuna.tsinghua.edu.cn/debian/</a> bullseye main contrib non-free<br />
+# deb-src <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/debian/">https://mirrors.tuna.tsinghua.edu.cn/debian/</a> bullseye main contrib non-free<br />
+deb <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/debian/">https://mirrors.tuna.tsinghua.edu.cn/debian/</a> bullseye-updates main contrib non-free<br />
+# deb-src <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/debian/">https://mirrors.tuna.tsinghua.edu.cn/debian/</a> bullseye-updates main contrib non-free<br />
+deb <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/debian/">https://mirrors.tuna.tsinghua.edu.cn/debian/</a> bullseye-backports main contrib non-free<br />
+# deb-src <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/debian/">https://mirrors.tuna.tsinghua.edu.cn/debian/</a> bullseye-backports main contrib non-free<br />
+deb <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/debian-security">https://mirrors.tuna.tsinghua.edu.cn/debian-security</a> bullseye-security main contrib non-free<br />
+# deb-src <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/debian-security">https://mirrors.tuna.tsinghua.edu.cn/debian-security</a> bullseye-security main contrib non-free</p>
 </blockquote>
-<h2 id="一些补充资料"><a href="#一些补充资料" class="headerlink" title="一些补充资料"></a>一些补充资料</h2><ul>
+<h2 id="一些补充资料"><a class="markdownIt-Anchor" href="#一些补充资料"></a> 一些补充资料</h2>
+<ul>
 <li>树莓派一般需要5V电压，最好是3A电流的电源适配器</li>
 </ul>
 

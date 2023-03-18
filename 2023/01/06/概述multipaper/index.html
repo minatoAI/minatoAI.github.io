@@ -84,11 +84,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -300,35 +296,44 @@
             
               <div class="markdown-body">
                 
-                <h1 id="日志，和要点记录"><a href="#日志，和要点记录" class="headerlink" title="日志，和要点记录"></a>日志，和要点记录</h1><h2 id="multipaper是什么"><a href="#multipaper是什么" class="headerlink" title="multipaper是什么"></a>multipaper是什么</h2><p>一个特殊的MC服务端<br>他实现了在多个服务端上同步互通地运行同一个世界地图  </p>
-<h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><ul>
+                <h1 id="日志和要点记录"><a class="markdownIt-Anchor" href="#日志和要点记录"></a> 日志，和要点记录</h1>
+<h2 id="multipaper是什么"><a class="markdownIt-Anchor" href="#multipaper是什么"></a> multipaper是什么</h2>
+<p>一个特殊的MC服务端<br />
+他实现了在多个服务端上同步互通地运行同一个世界地图</p>
+<h3 id="结构"><a class="markdownIt-Anchor" href="#结构"></a> 结构</h3>
+<ul>
 <li>一个master端，作用是数据库，作为其他服务器的数据中心和连接基点</li>
-<li>若干个服务端，承载玩家的交互处理<ul>
+<li>若干个服务端，承载玩家的交互处理
+<ul>
 <li>服务端之间会建立点对点连接，保证实时共享同步，包括跨服操作，时间同步等</li>
 </ul>
 </li>
-<li>（可选）一个反向代理服务端，玩家从代理端进入游戏，代理端控制玩家与服务端建立连接，合理分配玩家到服务器，保证负载平衡，效率最大化  </li>
+<li>（可选）一个反向代理服务端，玩家从代理端进入游戏，代理端控制玩家与服务端建立连接，合理分配玩家到服务器，保证负载平衡，效率最大化</li>
 <li>客户端，大量的客户端，毕竟这就是为承载大量玩家设计的。</li>
 </ul>
 <blockquote>
 <p>实际上，代理服务端是群组服代理端，他将multipaper的服务端看作群组服，在这个情况下master端会变成群组服的插件来运行。</p>
 </blockquote>
-<h3 id="具体部署搭建要点"><a href="#具体部署搭建要点" class="headerlink" title="具体部署搭建要点"></a>具体部署搭建要点</h3><h4 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h4><blockquote>
+<h3 id="具体部署搭建要点"><a class="markdownIt-Anchor" href="#具体部署搭建要点"></a> 具体部署搭建要点</h3>
+<h4 id="方案一"><a class="markdownIt-Anchor" href="#方案一"></a> 方案一</h4>
+<blockquote>
 <p>基础方案，默认都有公网IP，不增加代理服务</p>
 </blockquote>
 <ul>
 <li>将世界数据放置到master端的文件夹内；连接默认端口为35353</li>
-<li>在服务端的<code>multipaper.yml</code>中，修改<code>master-address</code>与<code>my-name</code>，对应master端的IP、端口与该服务端的唯一名称  </li>
+<li>在服务端的<code>multipaper.yml</code>中，修改<code>master-address</code>与<code>my-name</code>，对应master端的IP、端口与该服务端的唯一名称</li>
 <li>启动后服务端会自动连接。可在master端输入<code>shutdown</code>同时关闭所有服务端</li>
 </ul>
-<h4 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h4><blockquote>
+<h4 id="方案二"><a class="markdownIt-Anchor" href="#方案二"></a> 方案二</h4>
+<blockquote>
 <p>进阶选择一，增加代理服务</p>
 </blockquote>
 <ul>
 <li>在方案一的基础上，另外部署搭建代理端，比如bungeecord、waterfall、velocity等</li>
 <li>将master端放入插件文件夹。和群组服代理端一样，把服务器列表加入配置文件</li>
 </ul>
-<h4 id="方案三"><a href="#方案三" class="headerlink" title="方案三"></a>方案三</h4><blockquote>
+<h4 id="方案三"><a class="markdownIt-Anchor" href="#方案三"></a> 方案三</h4>
+<blockquote>
 <p>进阶选择二，增加内网穿透</p>
 </blockquote>
 <ul>
@@ -343,7 +348,8 @@
 <ul>
 <li>若需要同时进行代理服务，则同样将服务器列表设置为外网地址与端口</li>
 </ul>
-<h2 id="收获和总结"><a href="#收获和总结" class="headerlink" title="收获和总结"></a>收获和总结</h2><ul>
+<h2 id="收获和总结"><a class="markdownIt-Anchor" href="#收获和总结"></a> 收获和总结</h2>
+<ul>
 <li>frp内网穿透</li>
 <li>Linux CLI的使用（tmux，ps，ssh，vim等）</li>
 <li>初步理解分布式集群</li>

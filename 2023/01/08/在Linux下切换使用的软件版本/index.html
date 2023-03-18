@@ -83,11 +83,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -299,15 +295,20 @@
             
               <div class="markdown-body">
                 
-                <h1 id="update-alternatives：linux软件版本管理命令"><a href="#update-alternatives：linux软件版本管理命令" class="headerlink" title="update-alternatives：linux软件版本管理命令"></a>update-alternatives：linux软件版本管理命令</h1><blockquote>
-<p>参考链接：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1532283">https://cloud.tencent.com/developer/article/1532283</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u011762313/article/details/47324839">https://blog.csdn.net/u011762313/article/details/47324839</a><br>该命令需要管理员权限，请在使用时保证拥有权限</p>
+                <h1 id="update-alternativeslinux软件版本管理命令"><a class="markdownIt-Anchor" href="#update-alternativeslinux软件版本管理命令"></a> update-alternatives：linux软件版本管理命令</h1>
+<blockquote>
+<p>参考链接：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1532283">https://cloud.tencent.com/developer/article/1532283</a><br />
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/u011762313/article/details/47324839">https://blog.csdn.net/u011762313/article/details/47324839</a><br />
+该命令需要管理员权限，请在使用时保证拥有权限</p>
 </blockquote>
-<h2 id="各个选项的作用"><a href="#各个选项的作用" class="headerlink" title="各个选项的作用"></a>各个选项的作用</h2><p>以下省略命令<code>update-alternatives</code>，只描述选项</p>
+<h2 id="各个选项的作用"><a class="markdownIt-Anchor" href="#各个选项的作用"></a> 各个选项的作用</h2>
+<p>以下省略命令<code>update-alternatives</code>，只描述选项</p>
 <ul>
 <li><code>--display 名称</code>：查看该名称的软件版本信息</li>
 <li><code>--config 名称</code>：配置软件版本，即手动选择版本</li>
 <li><code>--auto 名称</code>：切换为自动选择版本，选择优先级最高的版本</li>
-<li><code>--install link name path priority</code>：增加版本信息<ul>
+<li><code>--install link name path priority</code>：增加版本信息
+<ul>
 <li>link：版本信息的软链接目录，即系统变量</li>
 <li>name：版本信息里的软件名称</li>
 <li>path：软件的目录</li>
@@ -315,7 +316,10 @@
 </ul>
 </li>
 </ul>
-<h2 id="个人例子"><a href="#个人例子" class="headerlink" title="个人例子"></a>个人例子</h2><p>因为开了不同版本的Minecraft服务器，而某些版本对于Java的版本有不同要求<br>比如1.7.10就需要Java8，不兼容更高版本；而运行1.19.2的最低Java版本是17<br>这时候就需要在运行之前切换Java版本</p>
+<h2 id="个人例子"><a class="markdownIt-Anchor" href="#个人例子"></a> 个人例子</h2>
+<p>因为开了不同版本的Minecraft服务器，而某些版本对于Java的版本有不同要求<br />
+比如1.7.10就需要Java8，不兼容更高版本；而运行1.19.2的最低Java版本是17<br />
+这时候就需要在运行之前切换Java版本</p>
 
                 
               </div>

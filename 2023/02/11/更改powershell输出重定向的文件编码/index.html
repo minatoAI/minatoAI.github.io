@@ -83,11 +83,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -237,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          324 字
+          308 字
         
       </span>
     
@@ -299,13 +295,15 @@
             
               <div class="markdown-body">
                 
-                <h1 id="解决powershell输出重定向的文件编码问题"><a href="#解决powershell输出重定向的文件编码问题" class="headerlink" title="解决powershell输出重定向的文件编码问题"></a>解决powershell输出重定向的文件编码问题</h1><span id="more"></span>
-
+                <h1 id="解决powershell输出重定向的文件编码问题"><a class="markdownIt-Anchor" href="#解决powershell输出重定向的文件编码问题"></a> 解决powershell输出重定向的文件编码问题</h1>
+<span id="more"></span>
 <blockquote>
 <p>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qianxiao_1/article/details/79463409">https://blog.csdn.net/qianxiao_1/article/details/79463409</a></p>
 </blockquote>
-<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><ul>
-<li>执行命令：<code>$PSDefaultParameterValues[&#39;Out-File:Encoding&#39;] = &#39;utf8&#39;</code>，选择utf8编码<ul>
+<h2 id="操作步骤"><a class="markdownIt-Anchor" href="#操作步骤"></a> 操作步骤</h2>
+<ul>
+<li>执行命令：<code>$PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'</code>，选择utf8编码
+<ul>
 <li>可选参数：unknown,string,unicode,bigendianunicode,utf8,utf7,utf32,ascii,default,oem</li>
 </ul>
 </li>

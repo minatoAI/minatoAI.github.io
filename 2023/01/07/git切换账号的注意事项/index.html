@@ -83,11 +83,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -299,17 +295,30 @@
             
               <div class="markdown-body">
                 
-                <h1 id="git修改账号时的注意事项"><a href="#git修改账号时的注意事项" class="headerlink" title="git修改账号时的注意事项"></a>git修改账号时的注意事项</h1><blockquote>
-<p>该文针对Windows系统使用git<br>例如修改账号，多个账号的时候可以作为参考</p>
-</blockquote>
-<h2 id="修改git内的配置无效"><a href="#修改git内的配置无效" class="headerlink" title="修改git内的配置无效"></a>修改git内的配置无效</h2><p>打开Windows的凭据管理器，删除旧的凭据</p>
-<h2 id="配置ssh-key"><a href="#配置ssh-key" class="headerlink" title="配置ssh key"></a>配置ssh key</h2><h3 id="创建ssh-key-将私钥加入ssh-agent"><a href="#创建ssh-key-将私钥加入ssh-agent" class="headerlink" title="创建ssh key, 将私钥加入ssh-agent"></a>创建ssh key, 将私钥加入ssh-agent</h3><p><code>ssh-agent bash</code>开启ssh agent<br><code>ssh-add -l</code>查看列表内容<br><code>ssh-add -D</code>删除列表内容<br><code>ssh-add key</code>将key加入列表</p>
-<h3 id="添加或修改配置文件"><a href="#添加或修改配置文件" class="headerlink" title="添加或修改配置文件"></a>添加或修改配置文件</h3><p>在git bash中，<br><code>cd ~/.ssh/</code>跳转到指定目录，新建一个config文件</p>
+                <h1 id="git修改账号时的注意事项"><a class="markdownIt-Anchor" href="#git修改账号时的注意事项"></a> git修改账号时的注意事项</h1>
 <blockquote>
-<p>Windows下的路径为<code>C:\users\电脑用户名\.ssh\</code><br>所需内容如下：</p>
+<p>该文针对Windows系统使用git<br />
+例如修改账号，多个账号的时候可以作为参考</p>
+</blockquote>
+<h2 id="修改git内的配置无效"><a class="markdownIt-Anchor" href="#修改git内的配置无效"></a> 修改git内的配置无效</h2>
+<p>打开Windows的凭据管理器，删除旧的凭据</p>
+<h2 id="配置ssh-key"><a class="markdownIt-Anchor" href="#配置ssh-key"></a> 配置ssh key</h2>
+<h3 id="创建ssh-key-将私钥加入ssh-agent"><a class="markdownIt-Anchor" href="#创建ssh-key-将私钥加入ssh-agent"></a> 创建ssh key, 将私钥加入ssh-agent</h3>
+<p><code>ssh-agent bash</code>开启ssh agent<br />
+<code>ssh-add -l</code>查看列表内容<br />
+<code>ssh-add -D</code>删除列表内容<br />
+<code>ssh-add key</code>将key加入列表</p>
+<h3 id="添加或修改配置文件"><a class="markdownIt-Anchor" href="#添加或修改配置文件"></a> 添加或修改配置文件</h3>
+<p>在git bash中，<br />
+<code>cd ~/.ssh/</code>跳转到指定目录，新建一个config文件</p>
+<blockquote>
+<p>Windows下的路径为<code>C:\users\电脑用户名\.ssh\</code><br />
+所需内容如下：</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">Host github.com<br>HostName github.com<br>user git<br>IdentityFile ~/.ssh/key<br></code></pre></td></tr></table></figure>
-<p>HostName是网站域名，IdentityFile是私钥位置<br>Host对应使用时的名字<br>添加多个不同的Host和相关内容，使用多个名字以同时使用多个账户</p>
+<p>HostName是网站域名，IdentityFile是私钥位置<br />
+Host对应使用时的名字<br />
+添加多个不同的Host和相关内容，使用多个名字以同时使用多个账户</p>
 
                 
               </div>

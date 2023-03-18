@@ -82,11 +82,7 @@
 
 
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -236,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          259 字
+          249 字
         
       </span>
     
@@ -298,14 +294,19 @@
             
               <div class="markdown-body">
                 
-                <h1 id="用hosts进行系统代理"><a href="#用hosts进行系统代理" class="headerlink" title="用hosts进行系统代理"></a>用hosts进行系统代理</h1><h2 id="hosts是什么"><a href="#hosts是什么" class="headerlink" title="hosts是什么"></a>hosts是什么</h2><p>系统自带的域名解析所使用的文件，存储IP地址与域名。</p>
-<h2 id="代理GitHub"><a href="#代理GitHub" class="headerlink" title="代理GitHub"></a>代理GitHub</h2><blockquote>
+                <h1 id="用hosts进行系统代理"><a class="markdownIt-Anchor" href="#用hosts进行系统代理"></a> 用hosts进行系统代理</h1>
+<h2 id="hosts是什么"><a class="markdownIt-Anchor" href="#hosts是什么"></a> hosts是什么</h2>
+<p>系统自带的域名解析所使用的文件，存储IP地址与域名。</p>
+<h2 id="代理github"><a class="markdownIt-Anchor" href="#代理github"></a> 代理GitHub</h2>
+<blockquote>
 <p>参考链接：<a target="_blank" rel="noopener" href="https://gitee.com/fliu2476/github-hosts">https://gitee.com/fliu2476/github-hosts</a></p>
 </blockquote>
 <p>将链接中的hosts规则复制到文件中。</p>
-<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>位置：&#x2F;etc&#x2F;hosts</p>
+<h3 id="linux"><a class="markdownIt-Anchor" href="#linux"></a> Linux</h3>
+<p>位置：/etc/hosts</p>
 <p>执行<code>sudo /etc/init.d/networking restart</code>保证生效。</p>
-<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>位置：<code>C:\Windows\System32\drivers\etc\hosts</code></p>
+<h3 id="windows"><a class="markdownIt-Anchor" href="#windows"></a> Windows</h3>
+<p>位置：<code>C:\Windows\System32\drivers\etc\hosts</code></p>
 <p>命令行执行<code>ipconfig /flushdns</code>保证生效。</p>
 
                 
